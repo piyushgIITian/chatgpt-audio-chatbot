@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	</head>
+	<style>
+		body {
+			line-height: 1.75;
+		}
+
+		.message {
+			white-space: pre-wrap;
+		}
+
+		#scroller * {
+			overflow-anchor: none;
+		}
+
+		#anchor {
+			overflow-anchor: auto;
+			height: 1px;
+		}
+
+		button {
+			background-color: black !important;
+			color: white !important;
+		}
+
+		.button {
+			background-color: black !important;
+			color: white !important;
+		}
+
+		a {
+			color: white;
+		}
+
+		a:visited {
+			color: white;
+		}
+	</style>
+	<body>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.6.0/socket.io.js"></script>
+		<div class="chat-container">
+			<div class="chat-input">
+				<input type="text" id="user-input" placeholder="Type a message..." />
+				<button id="send_button">Send</button>
+			</div>
+			<div class="chat-messages" id="chat-messages"></div>
+		</div>
+		<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+	</body>
+</html>

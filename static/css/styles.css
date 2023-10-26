@@ -1,0 +1,110 @@
+body {
+	font-family: Arial, sans-serif;
+	background-color: #444654; /* Background color for assistant */
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	color: white; /* Set text color to white */
+}
+
+.chat-container {
+	width: 70%;
+	background-color: #000; /* Black chat background */
+	border-radius: 8px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	overflow: hidden;
+	text-align: center;
+	padding: 20px;
+	margin: 20px;
+	height: 80vh;
+	max-height: 80vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+h1 {
+	font-size: 24px;
+	color: white; /* Set heading color to white */
+	font-weight: bold; /* Make the headings bold */
+	margin-bottom: 10px;
+}
+
+span {
+	font-size: 14px;
+	color: white; /* Set text color to white */
+}
+
+.chat-messages {
+	background-color: #1c1c1c; /* Very dark gray background color */
+	padding: 10px;
+	max-height: 60%;
+	overflow-y: scroll;
+	height: 50vh;
+	margin: 10px 0;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	border-radius: 15px;
+}
+
+.chat-input {
+	display: flex;
+	padding: 10px;
+	justify-content: space-between; /* Add space between input and button */
+}
+
+input[type='text'] {
+	flex: 1;
+	padding: 8px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	outline: none;
+	margin-right: 10px; /* Add margin to the right of the input box */
+}
+
+button {
+	padding: 8px;
+	background-color: #19c37d; /* Change button color to #19C37D */
+	color: white;
+	border: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 4px;
+	cursor: pointer;
+	outline: none;
+}
+
+button:hover {
+	background-color: #17a969; /* Darker green on hover */
+}
+button svg {
+	width: 25px;
+	height: 25px;
+}
+
+.message.user {
+	background-color: #343541;
+	color: white;
+	border-radius: 10px;
+	margin: 10px 0;
+	padding: 10px;
+	float: right;
+	clear: both;
+	text-align: right;
+	border-radius: 10px 0px 10px 10px;
+}
+
+.message.assistant {
+	background-color: #333;
+	color: #f0f0f0;
+	border-radius: 10px;
+	margin: 10px 0;
+	padding: 10px;
+	float: left;
+	clear: both;
+	text-align: left;
+	border-radius: 0px 10px 10px 10px;
+}

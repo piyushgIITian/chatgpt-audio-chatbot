@@ -1,0 +1,5 @@
+/gpt-to-voice
+*.env
+*.mp4
+*.zip
+

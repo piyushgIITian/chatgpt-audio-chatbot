@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>ChatGPT Clone</title>
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="{{ url_for('static',filename='css/styles.css') }}"
+		/>
+	</head>
+
+	<body>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.6.0/socket.io.js"></script>
+		<div class="chat-container">
+			<div>
+				<h1>ChatGPT Voice Assistant</h1>
+				<p>Powered by ChatGPT and Eleven Labs</p>
+				<button id="audio_toggle" onclick="toggleMute()">▶️ Play Audio</button>
+			</div>
+			<div class="chat-messages" id="chat-messages"></div>
+			<div class="chat-input">
+				<input type="text" id="user-input" placeholder="Type a message..." />
+				<button id="send-button">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 16 16"
+						fill="white"
+						class="icon-sm m-1 md:m-0"
+					>
+						<path
+							d="M.5 1.163A1 1 0 0 1 1.97.28l12.868 6.837a1 1 0 0 1 0 1.766L1.969 15.72A1 1 0 0 1 .5 14.836V10.33a1 1 0 0 1 .816-.983L8.5 8 1.316 6.653A1 1 0 0 1 .5 5.67V1.163Z"
+							fill="white"
+						></path>
+					</svg>
+				</button>
+			</div>
+		</div>
+		<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+	</body>
+</html>
